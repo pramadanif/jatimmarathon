@@ -1,12 +1,13 @@
 import React from 'react';
 import { Instagram, Twitter, Facebook, Mail, Phone, Rocket } from 'lucide-react';
+import Reveal from './Reveal';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-maroon-950 text-white pt-24 pb-12 overflow-hidden relative border-t border-white/10">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          <div className="space-y-6 animate-fade-in-up">
+          <Reveal className="space-y-6">
             <div className="flex items-center gap-2">
               <span className="font-serif font-black text-2xl tracking-tighter text-white">
                 JATIM<span className="text-gold">HALF</span><br />MARATHON
@@ -26,9 +27,9 @@ const Footer: React.FC = () => {
                 </a>
               ))}
             </div>
-          </div>
+          </Reveal>
 
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <Reveal delay={0.1}>
             <h4 className="text-sm font-bold mb-8 text-gold uppercase tracking-[0.2em]">Link Cepat</h4>
             <ul className="space-y-4 text-white/70 font-medium text-sm">
               {['Home', 'Kategori Lomba', 'Jadwal Acara', 'Syarat & Ketentuan'].map((link, idx) => (
@@ -39,9 +40,9 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
 
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <Reveal delay={0.2}>
             <h4 className="text-sm font-bold mb-8 text-gold uppercase tracking-[0.2em]">Kontak Kami</h4>
             <ul className="space-y-5 text-white/70 font-medium text-sm">
               <li className="flex items-center gap-4 hover:text-gold transition-colors duration-300">
@@ -53,9 +54,9 @@ const Footer: React.FC = () => {
                 <span>+62 812 3456 7890</span>
               </li>
             </ul>
-          </div>
+          </Reveal>
 
-          <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <Reveal delay={0.3} className="space-y-6">
             <h4 className="text-sm font-bold mb-8 text-gold uppercase tracking-[0.2em]">Newsletter</h4>
             <p className="text-white/50 text-sm">Dapatkan update terbaru seputar race.</p>
             <div className="flex gap-2 relative">
@@ -68,16 +69,18 @@ const Footer: React.FC = () => {
                 JOIN
               </button>
             </div>
-          </div>
+          </Reveal>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-white/30 text-[10px] font-bold uppercase tracking-widest animate-fade-in" style={{ animationDelay: '0.5s' }}>
-          <p>© 2026 JATIM HALF MARATHON. REGAL EXCELLENCE.</p>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors duration-300">PRIVACY POLICY</a>
-            <a href="#" className="hover:text-white transition-colors duration-300">COOKIE POLICY</a>
+        <Reveal delay={0.5}>
+          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-white/30 text-[10px] font-bold uppercase tracking-widest">
+            <p>© 2026 JATIM HALF MARATHON. REGAL EXCELLENCE.</p>
+            <div className="flex gap-8">
+              <a href="#" className="hover:text-white transition-colors duration-300">PRIVACY POLICY</a>
+              <a href="#" className="hover:text-white transition-colors duration-300">COOKIE POLICY</a>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </footer>
   );
