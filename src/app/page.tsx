@@ -12,6 +12,7 @@ import Sponsors from '@/components/Sponsors';
 import Routes from '@/components/Routes';
 import SizeChart from '@/components/SizeChart';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('home');
@@ -77,6 +78,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
